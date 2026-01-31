@@ -4,6 +4,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Examples</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/project.css">
+    <script>
+        MathJax = {
+            tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']],
+            displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
     <div class="container">
@@ -13,8 +23,59 @@
             </nav>
     </div>
     <h1>Projects</h1>
-    <div id="proj_table">
-
+    <div id="proj_list">
+        <div class="project_header">
+            <h2>Ray Tracer</h2>
+            <p class="project_summary">
+                Incorporating lighting (including reflection and refraction) and shadows to 3D models and rendering them using the stb_image library in C++.
+            </p>
+            <div class="img_grid">
+                <img src="../img/spheres2.png" alt="Sphere2 image">
+                <img src="../img/gear.png" alt = "gear image">
+            </div>
+            <div class="equation">
+                <p>
+                    Used the Phong reflection model for lighting:
+                    $$I_p = k_a i_a + \sum_{m} \left( k_d (\hat{L}_m \cdot \hat{N}) i_{m,d} + k_s (\hat{R}_m \cdot \hat{V})^{\alpha} i_{m,s} \right)$$
+                    $$
+                    \begin{aligned}
+                    I_p &:\; \text{illumination at surface point } p \\
+                    k_a, k_d, k_s &:\; \text{ambient, diffuse, and specular material coefficients} \\
+                    i_a &:\; \text{ambient light intensity} \\
+                    i_{m,d}, i_{m,s} &:\; \text{diffuse and specular intensity of light source } m \\
+                    \hat{L}_m &:\; \text{direction vector from surface point to light } m \\
+                    \hat{N} &:\; \text{surface normal vector} \\
+                    \hat{R}_m &:\; \text{perfect reflection direction} \\
+                    \hat{V} &:\; \text{view direction} \\
+                    \alpha &:\; \text{shininess coefficient}
+                    \end{aligned}
+                    $$
+                </p>
+            </div>
+        </div>
+        <div class="project_header">
+            <h2>Generating Random Trees Using L-System Fractals</h2>
+            <p class="project_summary">
+                Tree geometry was described using L-system grammar and rendered on OpenGL using mesh geometry<br><br>
+                Depth of recursion and randomly selected angle and length of branch makes each tree unique<br><br>
+                Leaves are generated as dragon curves (a type of fractal), making every part of a tree a fractal
+            </p>
+                <img src="../img/forest1.png" alt="forest1" width="300">
+                <img src="../img/forest2.png" alt="forest2" width="200">
+                <img src="../img/show_thin_branch.png" alt="single-tree" width="100">
+            <p>Explanation of L-System: <a href="https://en.wikipedia.org/wiki/L-system" color="white">https://en.wikipedia.org/wiki/L-system</a></p>
+            <p>Grammar used for this project: ("F[+F]F[-F]F", "F[+F][-F]", "FF[-F][+F]", "F[+F[+F]][-F[-F]]")</p>
+        </div>
+        <div class="project_header">
+            <h2>Drone Delivery Simulation</h2>
+            <p class="project_summary">Worked with peers to develop drone simulation on map based on University of Minnesota campus<br><br>
+                Users can set destination and search algorithm<br>
+                Simulation shows drone pick up package and travel through designated path to the destination
+            </p>
+            <img src="../img/schedule_page.png" alt="schedule page" width="30%">
+            <img src="../img/drone_delivery.png" alt="drone img" width = 30%>
+            </div>
+        </div>
     </div>
 </body>
 </html>

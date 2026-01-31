@@ -1,0 +1,30 @@
+#proj_list {
+    display: grid;
+    padding: 16px;
+    margin-left: 10px;
+}
+
+.img_grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 20vw));
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.img_grid img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.equation {
+    width: 50%;
+}
+
+a:link {
+    color: white;
+}
+a:visited {
+    color: purple;
+}
