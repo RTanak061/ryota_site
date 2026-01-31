@@ -22,7 +22,7 @@
     width: 50%;
 }
 
-a:link {
+p a:link {
     color: white;
 }
 p a:visited {
