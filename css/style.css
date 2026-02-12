@@ -1,7 +1,7 @@
 .container{
     display: flex;
     padding: 10px;
-    background-color: black;
+    background-color: blue;
 }
 
 nav a{
@@ -15,7 +15,7 @@ h1 {
 }
 
 body {
-    background-color: midnightblue;
+    background-color: black;
     margin: 0px;
     font-family: "Source Sans 3", system-ui, -apple-system,
                "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
